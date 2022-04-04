@@ -1,0 +1,659 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{54CEC799-43C8-45CC-9627-F849E0593993}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KND_HEALTHCARE</RootNamespace>
+    <AssemblyName>KND HEALTHCARE</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v19.2.UI, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Export, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.2.UI, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.2.Extensions, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.2.Wizard, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v19.2.Extensions, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database.cs" />
+    <Compile Include="DataSetHoaDon.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetHoaDon.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dtsHDPMT.cs">
+      <DependentUpon>dtsHDPMT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dtsHDPMT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsHDPMT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KNDHEALTHCAREDataSet.cs">
+      <DependentUpon>KNDHEALTHCAREDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KNDHEALTHCAREDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KNDHEALTHCAREDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KNDHEALTHCAREDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KNDHEALTHCAREDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BIENBANHUYTHUOC.cs" />
+    <Compile Include="Models\CHITIETBIENBAN.cs" />
+    <Compile Include="Models\CHITIETPHIEUDATMUA.cs" />
+    <Compile Include="Models\CHITIETPHIEUMUATHUOC.cs" />
+    <Compile Include="Models\KHACHHANG.cs" />
+    <Compile Include="Models\KHOTHUOC.cs" />
+    <Compile Include="Models\LOAITHUOC.cs" />
+    <Compile Include="Models\Model1.cs" />
+    <Compile Include="Models\NHACUNGCAP.cs" />
+    <Compile Include="Models\NHANVIEN.cs" />
+    <Compile Include="Models\PHIEUDATMUA.cs" />
+    <Compile Include="Models\PHIEUMUATHUOC.cs" />
+    <Compile Include="Models\sysdiagram.cs" />
+    <Compile Include="Models\THUOC.cs" />
+    <Compile Include="Report\rptConTact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\rptConTact.Designer.cs">
+      <DependentUpon>rptConTact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptPhieuMua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\rptPhieuMua.Designer.cs">
+      <DependentUpon>rptPhieuMua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SHA_256.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Staff\frmBanThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff\frmBanThuoc.Designer.cs">
+      <DependentUpon>frmBanThuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\frmHuyThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff\frmHuyThuoc.Designer.cs">
+      <DependentUpon>frmHuyThuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\frmMyUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff\frmMyUser.Designer.cs">
+      <DependentUpon>frmMyUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\frmNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\frmNCC.Designer.cs">
+      <DependentUpon>frmNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\frmNhapThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff\frmNhapThuoc.Designer.cs">
+      <DependentUpon>frmNhapThuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\frmQLKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff\frmQLKH.Designer.cs">
+      <DependentUpon>frmQLKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\frmQLLoaiThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\frmQLLoaiThuoc.Designer.cs">
+      <DependentUpon>frmQLLoaiThuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQLThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLThuoc.Designer.cs">
+      <DependentUpon>frmQLThuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmDN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmDN.Designer.cs">
+      <DependentUpon>frmDN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\frmQLNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\frmQLNV.Designer.cs">
+      <DependentUpon>frmQLNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmResetPassword.Designer.cs">
+      <DependentUpon>frmResetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\frmThongTinThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff\frmThongTinThuoc.Designer.cs">
+      <DependentUpon>frmThongTinThuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTimKiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimKiem.Designer.cs">
+      <DependentUpon>frmTimKiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Admin\QLNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\QLNV.Designer.cs">
+      <DependentUpon>QLNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\crpHD.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpHD.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\crpNCC.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpNCC.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\crpNhanVien.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpNhanVien.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\crpThuoc.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpThuoc.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\crpThuocHuy.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpThuocHuy.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\rptHD.Designer.cs">
+      <DependentUpon>rptHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\rptNCC.Designer.cs">
+      <DependentUpon>rptNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\rptNhanVien.Designer.cs">
+      <DependentUpon>rptNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\rptThuoc.Designer.cs">
+      <DependentUpon>rptThuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptThuocHuy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\rptThuocHuy.Designer.cs">
+      <DependentUpon>rptThuocHuy.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Report\ContactReport.rdlc" />
+    <EmbeddedResource Include="Report\rptConTact.resx">
+      <DependentUpon>rptConTact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptPhieuMua.resx">
+      <DependentUpon>rptPhieuMua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptPhieuMuaThuoc.rdlc" />
+    <EmbeddedResource Include="Staff\frmBanThuoc.resx">
+      <DependentUpon>frmBanThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff\frmHuyThuoc.resx">
+      <DependentUpon>frmHuyThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmDN.resx">
+      <DependentUpon>frmDN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff\frmMyUser.resx">
+      <DependentUpon>frmMyUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\frmNCC.resx">
+      <DependentUpon>frmNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff\frmNhapThuoc.resx">
+      <DependentUpon>frmNhapThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff\frmQLKH.resx">
+      <DependentUpon>frmQLKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\frmQLLoaiThuoc.resx">
+      <DependentUpon>frmQLLoaiThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\frmQLNV.resx">
+      <DependentUpon>frmQLNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQLThuoc.resx">
+      <DependentUpon>frmQLThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmResetPassword.resx">
+      <DependentUpon>frmResetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff\frmThongTinThuoc.resx">
+      <DependentUpon>frmThongTinThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTimKiem.resx">
+      <DependentUpon>frmTimKiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Admin\QLNV.resx">
+      <DependentUpon>QLNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\crpHD.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpHD.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\crpNCC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpNCC.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\crpNhanVien.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpNhanVien.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\crpThuoc.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpThuoc.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\crpThuocHuy.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpThuocHuy.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptHD.resx">
+      <DependentUpon>rptHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptNCC.resx">
+      <DependentUpon>rptNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptNhanVien.resx">
+      <DependentUpon>rptNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptThuoc.resx">
+      <DependentUpon>rptThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptThuocHuy.resx">
+      <DependentUpon>rptThuocHuy.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSetHoaDon.xsc">
+      <DependentUpon>DataSetHoaDon.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetHoaDon.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetHoaDon.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetHoaDon.xss">
+      <DependentUpon>DataSetHoaDon.xsd</DependentUpon>
+    </None>
+    <None Include="dtsHDPMT.xsc">
+      <DependentUpon>dtsHDPMT.xsd</DependentUpon>
+    </None>
+    <None Include="dtsHDPMT.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsHDPMT.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dtsHDPMT.xss">
+      <DependentUpon>dtsHDPMT.xsd</DependentUpon>
+    </None>
+    <None Include="KNDHEALTHCAREDataSet.xsc">
+      <DependentUpon>KNDHEALTHCAREDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KNDHEALTHCAREDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KNDHEALTHCAREDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="KNDHEALTHCAREDataSet.xss">
+      <DependentUpon>KNDHEALTHCAREDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KNDHEALTHCAREDataSet11.xsc">
+      <DependentUpon>KNDHEALTHCAREDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="KNDHEALTHCAREDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KNDHEALTHCAREDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KNDHEALTHCAREDataSet11.xss">
+      <DependentUpon>KNDHEALTHCAREDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Doctor-blue-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zalo_636569096469828593.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NCC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thuoc.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thuoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loaithuoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nhacungcap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doctor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thongke.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thongkethuoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thongkencc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analytics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kndhealthcare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kndhealthcare1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kndhealthcare2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kndhealthcare3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kndhealthcare%2802%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paracetamol.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loupe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thuoc1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bán thuốc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thongtinthuoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tagged.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Doctor-blue-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recycle bin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nhapthuoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NCC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full-shoping-cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nitro_Wallpaper_5000x2813.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frmLogin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frmLogin1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frmLogin2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frmLogin3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frmLogin11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frmLogin4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frmLogin5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analytics1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subtraction-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Medicalwp-Medical-Health-Sign-blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone-call.png" />
+    <None Include="Resources\books.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
